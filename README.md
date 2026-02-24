@@ -1,51 +1,94 @@
-# Sales Analytics & BI Dashboard
+# Sales Analytics Dashboard
 
-## Pages & Features
+Sales performance analytics with BI dashboards and forecasting.
 
-### 1. Dashboard (Overview)
-- KPI cards: revenue, orders, avg order value, growth %
-- Revenue trend chart (daily / weekly / monthly / yearly)
-- Top products & categories widget
-- Geographic sales heatmap
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Revenue Analytics
-- Revenue breakdown by product, category, channel, region
-- Period comparison (this month vs. last, YoY)
-- Revenue forecast with trend line
-- Drill-down from summary to line-item detail
+## Tech Stack
 
-### 3. Customer Analytics
-- Customer acquisition over time
-- Customer lifetime value (CLV) distribution
-- Cohort retention analysis
-- Top customers by revenue
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Product Performance
-- Product ranking by sales, revenue, margin
-- Product comparison charts
-- Inventory turnover rate
-- Product trend sparklines
+## Getting Started
 
-### 5. Sales Team Performance
-- Leaderboard by rep (revenue, deals closed)
-- Individual rep performance page
-- Quota attainment tracking
-- Activity metrics (calls, meetings, emails)
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Reports Builder
-- Drag-and-drop report designer
-- Choose metrics, dimensions, filters, and chart types
-- Save & share custom reports
-- Schedule automated report delivery via email
+## License
 
-### 7. Data Sources
-- Connect data sources (CSV upload, API integration)
-- Data mapping & transformation preview
-- Sync status & history
-- Data refresh scheduling
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Dashboard layout customization
-- Default date range & currency
-- User roles & access control
-- Notification & alert thresholds
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
